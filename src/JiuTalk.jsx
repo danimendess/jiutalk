@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LESSON_ILLUSTRATIONS } from "./Illustrations.jsx";
  
 const C = {
   navy: "#0d1f3c",
@@ -402,9 +403,9 @@ function FlashCard({ card, lang }) {
       <div style={{ position: "relative", width: "100%", paddingBottom: "75%", transformStyle: "preserve-3d", transition: "transform 0.5s cubic-bezier(0.4,0,0.2,1)", transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}>
         {[false, true].map(isBack => (
           <div key={isBack ? "b" : "f"} style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden", transform: isBack ? "rotateY(180deg)" : "none", background: isBack ? `linear-gradient(135deg, ${C.orange}, ${C.orangeDark})` : `linear-gradient(135deg, ${C.navyMid}, #0d1f3c)`, borderRadius: 20, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12, border: isBack ? "none" : `2px solid rgba(255,140,0,0.25)`, boxShadow: "0 8px 32px rgba(0,0,0,0.5)", padding: "24px 20px" }}>
-            <span style={{ fontSize: 48, lineHeight: 1 }}>{card.icon}</span>
-            <span style={{ color: "#fff", fontFamily: "'Nunito',sans-serif", fontWeight: 900, fontSize: 22, textAlign: "center" }}>{isBack ? back : front}</span>
-            <span style={{ color: "rgba(255,255,255,0.55)", fontSize: 11, fontFamily: "'Nunito',sans-serif" }}>{isBack ? (lang === "pt" ? "toque para voltar" : "tap to go back") : (lang === "pt" ? "toque para ver tradução" : "tap to see translation")}</span>
+            <span style={{ fontSize: 56, lineHeight: 1 }}>{card.icon}</span>
+            <span style={{ color: "#fff", fontFamily: "'Nunito',sans-serif", fontWeight: 900, fontSize: 26, textAlign: "center" }}>{isBack ? back : front}</span>
+            <span style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, fontFamily: "'Nunito',sans-serif" }}>{isBack ? (lang === "pt" ? "toque para voltar" : "tap to go back") : (lang === "pt" ? "toque para ver tradução" : "tap to see translation")}</span>
           </div>
         ))}
       </div>
@@ -541,29 +542,31 @@ function LessonView({ lesson, lang, onBack, onComplete }) {
         </div>
       </div>
       <div style={{ padding: 20 }}>
+        {/* Illustration */}
+        {(() => { const Illus = LESSON_ILLUSTRATIONS[lesson.id]; return Illus ? <div style={{ marginBottom: 16, borderRadius: 16, overflow: "hidden" }}><Illus /></div> : null; })()}
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 12 }}>
-          <span style={{ color: C.muted, fontSize: 13 }}>{cardIdx + 1} / {cards.length}</span>
-          <span style={{ color: C.orange, fontSize: 13, fontWeight: 700 }}>{Math.round(((cardIdx + 1) / cards.length) * 100)}%</span>
+          <span style={{ color: C.muted, fontSize: 15 }}>{cardIdx + 1} / {cards.length}</span>
+          <span style={{ color: C.orange, fontSize: 15, fontWeight: 700 }}>{Math.round(((cardIdx + 1) / cards.length) * 100)}%</span>
         </div>
-        <div style={{ height: 4, background: C.faint, borderRadius: 4, marginBottom: 24, overflow: "hidden" }}>
+        <div style={{ height: 6, background: C.faint, borderRadius: 4, marginBottom: 24, overflow: "hidden" }}>
           <div style={{ height: "100%", width: `${((cardIdx + 1) / cards.length) * 100}%`, background: C.orange, borderRadius: 4, transition: "width 0.3s" }} />
         </div>
         <FlashCard key={cardIdx} card={cards[cardIdx]} lang={lang} />
         <div style={{ display: "flex", gap: 12, marginTop: 20 }}>
-          <button onClick={() => setCardIdx(Math.max(0, cardIdx - 1))} disabled={cardIdx === 0} style={{ flex: 1, padding: "14px", background: cardIdx === 0 ? C.faint : "rgba(255,255,255,0.1)", border: "none", borderRadius: 14, color: cardIdx === 0 ? "rgba(255,255,255,0.2)" : "#fff", cursor: cardIdx === 0 ? "default" : "pointer", fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 16 }}>←</button>
+          <button onClick={() => setCardIdx(Math.max(0, cardIdx - 1))} disabled={cardIdx === 0} style={{ flex: 1, padding: "16px", background: cardIdx === 0 ? C.faint : "rgba(255,255,255,0.1)", border: "none", borderRadius: 14, color: cardIdx === 0 ? "rgba(255,255,255,0.2)" : "#fff", cursor: cardIdx === 0 ? "default" : "pointer", fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: 18 }}>←</button>
           {!isLast
-            ? <button onClick={() => setCardIdx(cardIdx + 1)} style={{ flex: 2, padding: "14px", background: `linear-gradient(135deg, ${C.orange}, ${C.orangeDark})`, border: "none", borderRadius: 14, color: "#fff", cursor: "pointer", fontFamily: "'Nunito',sans-serif", fontWeight: 900, fontSize: 16, boxShadow: "0 4px 16px rgba(255,140,0,0.3)" }}>{lang === "pt" ? "Próximo →" : "Next →"}</button>
-            : <button onClick={() => { onComplete(); onBack(); }} style={{ flex: 2, padding: "14px", background: `linear-gradient(135deg, ${C.green}, ${C.greenDark})`, border: "none", borderRadius: 14, color: "#fff", cursor: "pointer", fontFamily: "'Nunito',sans-serif", fontWeight: 900, fontSize: 16, boxShadow: "0 4px 16px rgba(34,197,94,0.3)" }}>{lang === "pt" ? "✅ Concluir!" : "✅ Complete!"}</button>
+            ? <button onClick={() => setCardIdx(cardIdx + 1)} style={{ flex: 2, padding: "16px", background: `linear-gradient(135deg, ${C.orange}, ${C.orangeDark})`, border: "none", borderRadius: 14, color: "#fff", cursor: "pointer", fontFamily: "'Nunito',sans-serif", fontWeight: 900, fontSize: 18, boxShadow: "0 4px 16px rgba(255,140,0,0.3)" }}>{lang === "pt" ? "Próximo →" : "Next →"}</button>
+            : <button onClick={() => { onComplete(); onBack(); }} style={{ flex: 2, padding: "16px", background: `linear-gradient(135deg, ${C.green}, ${C.greenDark})`, border: "none", borderRadius: 14, color: "#fff", cursor: "pointer", fontFamily: "'Nunito',sans-serif", fontWeight: 900, fontSize: 18, boxShadow: "0 4px 16px rgba(34,197,94,0.3)" }}>{lang === "pt" ? "✅ Concluir!" : "✅ Complete!"}</button>
           }
         </div>
-        <h3 style={{ color: C.orange, fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: 1, margin: "28px 0 12px" }}>{lang === "pt" ? "Todas as palavras" : "All words"}</h3>
+        <h3 style={{ color: C.orange, fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: 1, margin: "28px 0 12px" }}>{lang === "pt" ? "Todas as palavras" : "All words"}</h3>
         {cards.map((c, i) => (
-          <div key={i} onClick={() => setCardIdx(i)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", background: i === cardIdx ? "rgba(255,140,0,0.12)" : C.faint, border: `1px solid ${i === cardIdx ? "rgba(255,140,0,0.3)" : C.border}`, borderRadius: 10, padding: "10px 14px", marginBottom: 8, cursor: "pointer" }}>
-            <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <span style={{ fontSize: 18 }}>{c.icon}</span>
-              <span style={{ color: "#fff", fontWeight: 700, fontSize: 14 }}>{c.pt}</span>
+          <div key={i} onClick={() => setCardIdx(i)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", background: i === cardIdx ? "rgba(255,140,0,0.12)" : C.faint, border: `1px solid ${i === cardIdx ? "rgba(255,140,0,0.3)" : C.border}`, borderRadius: 12, padding: "14px 16px", marginBottom: 10, cursor: "pointer" }}>
+            <span style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <span style={{ fontSize: 24 }}>{c.icon}</span>
+              <span style={{ color: "#fff", fontWeight: 700, fontSize: 17 }}>{c.pt}</span>
             </span>
-            <span style={{ color: C.orange, fontSize: 13 }}>{c.en}</span>
+            <span style={{ color: C.orange, fontSize: 15, fontWeight: 600 }}>{c.en}</span>
           </div>
         ))}
       </div>
@@ -752,4 +755,3 @@ export default function JiuTalkApp() {
     </div>
   );
 }
- 

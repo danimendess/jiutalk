@@ -1,5 +1,5 @@
 import { useState } from "react";
- 
+
 // ─── ILUSTRAÇÕES INLINE ───────────────────────────────────────────────────────
 const IllustrationSaudacoes = () => (
   <svg width="100%" viewBox="0 0 360 180" role="img" style={{borderRadius:14,display:"block"}}>
@@ -48,7 +48,7 @@ const IllustrationSaudacoes = () => (
     <text x="253" y="36" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="11" fill="white" opacity="0.9">Hello! / Olá!</text>
   </svg>
 );
- 
+
 const IllustrationAnimais = () => (
   <svg width="100%" viewBox="0 0 360 160" role="img" style={{borderRadius:14,display:"block"}}>
     <rect width="360" height="160" fill="#e8f5e9"/>
@@ -77,7 +77,7 @@ const IllustrationAnimais = () => (
     <text x="300" y="158" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="8" fontWeight="900" fill="white">Monkey / Macaco</text>
   </svg>
 );
- 
+
 const IllustrationCorpo = () => (
   <svg width="100%" viewBox="0 0 360 200" role="img" style={{borderRadius:14,display:"block"}}>
     <rect width="360" height="200" fill="#f0f7ff"/>
@@ -134,7 +134,7 @@ const IllustrationCorpo = () => (
     <text x="38" y="171" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="8.5" fontWeight="900" fill="white">Leg/Perna</text>
   </svg>
 );
- 
+
 const IllustrationCoresKimono = () => (
   <svg width="100%" viewBox="0 0 360 160" role="img" style={{borderRadius:14,display:"block"}}>
     <rect width="360" height="160" fill="#f8f9ff"/>
@@ -164,7 +164,7 @@ const IllustrationCoresKimono = () => (
     ))}
   </svg>
 );
- 
+
 const IllustrationFaixas = () => {
   const belts = [
     {color:"#f5f5f5",stroke:"#ddd",label:"White",sub:"Branca",tc:"#555"},
@@ -206,7 +206,7 @@ const IllustrationFaixas = () => {
     </svg>
   );
 };
- 
+
 const IllustrationDojo = () => (
   <svg width="100%" viewBox="0 0 360 180" role="img" style={{borderRadius:14,display:"block"}}>
     <rect width="360" height="180" fill="#f5f0e8" stroke="#8B6914" strokeWidth="3"/>
@@ -241,7 +241,7 @@ const IllustrationDojo = () => (
     <text x="319" y="170" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="13">🖼️</text>
   </svg>
 );
- 
+
 const IllustrationComidas = () => (
   <svg width="100%" viewBox="0 0 360 140" role="img" style={{borderRadius:14,display:"block"}}>
     <rect width="360" height="140" fill="#fff8f0"/>
@@ -267,7 +267,7 @@ const IllustrationComidas = () => (
     <text x="180" y="134" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="9" fontWeight="900" fill="#fedd00">🇧🇷 Eat like a Brazilian! / Coma como um brasileiro!</text>
   </svg>
 );
- 
+
 const IllustrationPosicoes = () => (
   <svg width="100%" viewBox="0 0 360 160" role="img" style={{borderRadius:14,display:"block"}}>
     <rect width="360" height="160" fill="#f0f4ff"/>
@@ -291,7 +291,7 @@ const IllustrationPosicoes = () => (
     ))}
   </svg>
 );
- 
+
 const IllustrationSentimentos = () => {
   const feelings = [
     {emoji:"😄",label:"Happy",sub:"Feliz",color:"#fbbf24"},
@@ -326,7 +326,7 @@ const IllustrationSentimentos = () => {
     </svg>
   );
 };
- 
+
 const LESSON_ILLUSTRATIONS = {
   "v1l1": IllustrationSaudacoes,
   "v1l2": IllustrationCoresKimono,
@@ -338,7 +338,7 @@ const LESSON_ILLUSTRATIONS = {
   "v3l1": IllustrationPosicoes,
   "v3l5": IllustrationSentimentos,
 };
- 
+
 const C = {
   navy: "#0d1f3c",
   navyMid: "#1a3a6e",
@@ -353,7 +353,7 @@ const C = {
   green: "#22c55e",
   greenDark: "#16a34a",
 };
- 
+
 const VOLUMES = [
   {
     id: 1, freeAccess: true,
@@ -366,12 +366,12 @@ const VOLUMES = [
         story: {
           title: "João e Maria no Primeiro Dia", titleEn: "João and Maria on the First Day",
           lines: [
-            { speaker: "NARRADOR", pt: "Esta é a história de João e Maria no primeiro dia de Jiu-Jitsu.", en: "This is the story of João and Maria on their first day of Jiu-Jitsu." },
-            { speaker: "JOÃO", pt: "Olá! Eu me chamo João. Eu tenho seis anos.", en: "Hello! My name is João. I am six years old." },
-            { speaker: "MARIA", pt: "Olá! Eu me chamo Maria. Eu tenho sete anos.", en: "Hello! My name is Maria. I am seven years old." },
-            { speaker: "PROFESSOR", pt: "Bom dia, crianças! Bem-vindos à academia de Jiu-Jitsu!", en: "Good morning, children! Welcome to the Jiu-Jitsu academy!" },
-            { speaker: "PROFESSOR", pt: "Este é o tatame. O tatame é azul e macio.", en: "This is the mat. The mat is blue and soft." },
-            { speaker: "PROFESSOR", pt: "No Jiu-Jitsu, nós dizemos 'Oss' para cumprimentar.", en: "In Jiu-Jitsu, we say 'Oss' to greet each other." },
+            { speaker: "NARRADOR", pt: "Esta é a história de João e Maria no primeiro dia de Jiu-Jitsu.", en: "Meet João and Maria — it's their very first day of Jiu-Jitsu!" },
+            { speaker: "JOÃO", pt: "Olá! Eu me chamo João. Eu tenho seis anos.", en: "Hey! I'm João. I'm six years old." },
+            { speaker: "MARIA", pt: "Olá! Eu me chamo Maria. Eu tenho sete anos.", en: "Hi! I'm Maria. I just turned seven!" },
+            { speaker: "PROFESSOR", pt: "Bom dia, crianças! Bem-vindos à academia de Jiu-Jitsu!", en: "Morning, everyone! Welcome to the mat!" },
+            { speaker: "PROFESSOR", pt: "Este é o tatame. O tatame é azul e macio.", en: "This is the tatame — the mat. Feel how soft it is!" },
+            { speaker: "PROFESSOR", pt: "No Jiu-Jitsu, nós dizemos 'Oss' para cumprimentar.", en: "In BJJ, we greet each other with 'Oss'. Try it!" },
             { speaker: "TODOS", pt: "Oss!", en: "Oss!" },
           ],
         },
@@ -391,10 +391,10 @@ const VOLUMES = [
         story: {
           title: "Meu Primeiro Kimono", titleEn: "My First Kimono",
           lines: [
-            { speaker: "PEDRO", pt: "Olá! Eu me chamo Pedro. Hoje eu ganhei o meu primeiro kimono!", en: "Hello! My name is Pedro. Today I got my first kimono!" },
-            { speaker: "PEDRO", pt: "O kimono é branco. A faixa é branca também.", en: "The kimono is white. The belt is also white." },
-            { speaker: "PEDRO", pt: "No tatame, todos usam kimono. O tatame é azul e macio.", en: "On the mat, everyone wears a kimono. The mat is blue and soft." },
-            { speaker: "PROFESSOR", pt: "Sentem no tatame! Todos dizem: Oss!", en: "Sit on the mat! Everyone say: Oss!" },
+            { speaker: "PEDRO", pt: "Olá! Eu me chamo Pedro. Hoje eu ganhei o meu primeiro kimono!", en: "Guys, look! I just got my very first gi!" },
+            { speaker: "PEDRO", pt: "O kimono é branco. A faixa é branca também.", en: "It's white — and the belt is white too. White belt, here I come!" },
+            { speaker: "PEDRO", pt: "No tatame, todos usam kimono. O tatame é azul e macio.", en: "Everyone on the mat wears a gi. The mat is so blue and soft!" },
+            { speaker: "PROFESSOR", pt: "Sentem no tatame! Todos dizem: Oss!", en: "Sit down on the mat, guys! All together now: Oss!" },
           ],
         },
         flashcards: [
@@ -466,9 +466,9 @@ const VOLUMES = [
           { pt: "Meu nome é…", en: "My name is…", icon: "🏷️" },
           { pt: "Eu tenho X anos.", en: "I am X years old.", icon: "🎂" },
           { pt: "Eu sou de…", en: "I am from…", icon: "🌍" },
-          { pt: "Eu treino Jiu-Jitsu há… anos.", en: "I have trained Jiu-Jitsu for… years.", icon: "📅" },
-          { pt: "Eu sou faixa branca.", en: "I am a white belt.", icon: "⬜" },
-          { pt: "Minha academia é…", en: "My academy is…", icon: "🏫" },
+          { pt: "Eu treino Jiu-Jitsu há… anos.", en: "I've been training BJJ for… years.", icon: "📅" },
+          { pt: "Eu sou faixa branca.", en: "I'm a white belt.", icon: "⬜" },
+          { pt: "Minha academia é…", en: "My gym is…", icon: "🏫" },
           { pt: "Prazer em conhecer!", en: "Nice to meet you!", icon: "🤝" },
         ],
       },
@@ -490,10 +490,10 @@ const VOLUMES = [
         id: "v2l3", icon: "🏠", title: "Partes do Dojo", titleEn: "Parts of the Dojo", story: null,
         flashcards: [
           { pt: "O tatame", en: "The mat", icon: "🟦" },
-          { pt: "A academia / o dojo", en: "The academy / dojo", icon: "🏫" },
-          { pt: "O vestiário", en: "The changing room", icon: "👕" },
+          { pt: "A academia / o dojo", en: "The gym / dojo", icon: "🏫" },
+          { pt: "O vestiário", en: "The locker room", icon: "👕" },
           { pt: "A área de aquecimento", en: "The warm-up area", icon: "🔥" },
-          { pt: "A recepção", en: "The reception", icon: "🪑" },
+          { pt: "A recepção", en: "The front desk", icon: "🪑" },
           { pt: "O bebedouro", en: "The water fountain", icon: "💧" },
           { pt: "A parede de fotos", en: "The photo wall", icon: "🖼️" },
         ],
@@ -537,12 +537,12 @@ const VOLUMES = [
         story: {
           title: "Um Dia de Treino", titleEn: "A Training Day",
           lines: [
-            { speaker: "LUCAS", pt: "Oi, Pedro! Vamos treinar a passagem de guarda que aprendemos semana passada.", en: "Hi, Pedro! Let's practice the guard pass we learned last week." },
-            { speaker: "PEDRO", pt: "Boa ideia! Eu preciso praticar mais essa técnica.", en: "Good idea! I need to practice that technique more." },
-            { speaker: "PROFESSOR", pt: "Bom dia, turma! Hoje vamos revisar a passagem de guarda e aprender o triângulo.", en: "Good morning, class! Today we'll review the guard pass and learn the triangle." },
-            { speaker: "PROFESSOR", pt: "Formem duplas para treinar. Depois trocamos!", en: "Get into pairs to practice. Then we switch!" },
-            { speaker: "LUCAS", pt: "Pedro, se doer, bata três vezes no tatame.", en: "Pedro, if it hurts, tap three times on the mat." },
-            { speaker: "TODOS", pt: "Obrigado, professor! Oss!", en: "Thank you, teacher! Oss!" },
+            { speaker: "LUCAS", pt: "Oi, Pedro! Vamos treinar a passagem de guarda que aprendemos semana passada.", en: "Yo Pedro! Wanna drill that guard pass we learned last week?" },
+            { speaker: "PEDRO", pt: "Boa ideia! Eu preciso praticar mais essa técnica.", en: "Yeah for sure! I really need to work on that one." },
+            { speaker: "PROFESSOR", pt: "Bom dia, turma! Hoje vamos revisar a passagem de guarda e aprender o triângulo.", en: "Alright guys, listen up! Today we're drilling the guard pass — and I'm gonna show you the triangle!" },
+            { speaker: "PROFESSOR", pt: "Formem duplas para treinar. Depois trocamos!", en: "Find a partner and get to work. We'll switch after a few rounds!" },
+            { speaker: "LUCAS", pt: "Pedro, se doer, bata três vezes no tatame.", en: "Hey Pedro — if anything hurts, just tap three times, okay?" },
+            { speaker: "TODOS", pt: "Obrigado, professor! Oss!", en: "Thanks coach! Oss!" },
           ],
         },
         flashcards: [
@@ -589,23 +589,23 @@ const VOLUMES = [
         story: {
           title: "Conversa com o Professor", titleEn: "Conversation with the Teacher",
           lines: [
-            { speaker: "ALUNO", pt: "Bom dia, Sensei! Posso fazer uma pergunta sobre a técnica de ontem?", en: "Good morning, Sensei! May I ask a question about yesterday's technique?" },
-            { speaker: "SENSEI", pt: "Claro, pode perguntar.", en: "Of course, go ahead." },
-            { speaker: "ALUNO", pt: "Quando faço o armlock, tenho dificuldade em controlar o braço. O que estou fazendo errado?", en: "When I do the armlock, I have trouble controlling the arm. What am I doing wrong?" },
-            { speaker: "SENSEI", pt: "Você precisa segurar o pulso com mais firmeza e usar seus quadris para criar ângulo.", en: "You need to grip the wrist more firmly and use your hips to create an angle." },
-            { speaker: "ALUNO", pt: "Obrigado pela ajuda, Sensei. Vou praticar mais.", en: "Thank you for the help, Sensei. I'll practice more." },
-            { speaker: "SENSEI", pt: "Boa! Lembre-se: a prática leva à perfeição. Continue treinando com dedicação!", en: "Good! Remember: practice makes perfect. Keep training with dedication!" },
-            { speaker: "ALUNO", pt: "Sim, Sensei! Oss!", en: "Yes, Sensei! Oss!" },
+            { speaker: "ALUNO", pt: "Bom dia, Sensei! Posso fazer uma pergunta sobre a técnica de ontem?", en: "Hey Sensei! Can I ask you something about yesterday's technique?" },
+            { speaker: "SENSEI", pt: "Claro, pode perguntar.", en: "Of course, go ahead!" },
+            { speaker: "ALUNO", pt: "Quando faço o armlock, tenho dificuldade em controlar o braço. O que estou fazendo errado?", en: "When I go for the armlock, I keep losing the arm. What am I doing wrong?" },
+            { speaker: "SENSEI", pt: "Você precisa segurar o pulso com mais firmeza e usar seus quadris para criar ângulo.", en: "You gotta grip the wrist tighter — and really use your hips to get the angle." },
+            { speaker: "ALUNO", pt: "Obrigado pela ajuda, Sensei. Vou praticar mais.", en: "Got it! I'll keep drilling it. Thanks Sensei!" },
+            { speaker: "SENSEI", pt: "Boa! Lembre-se: a prática leva à perfeição. Continue treinando com dedicação!", en: "That's what I like to hear! Remember — reps make champions. Keep grinding!" },
+            { speaker: "ALUNO", pt: "Sim, Sensei! Oss!", en: "Yes Sensei! Oss!" },
           ],
         },
         flashcards: [
-          { pt: "Posso fazer uma pergunta?", en: "May I ask a question?", icon: "🙋" },
-          { pt: "Não entendi bem.", en: "I didn't quite understand.", icon: "🤔" },
-          { pt: "Pode repetir, por favor?", en: "Can you repeat that, please?", icon: "🔁" },
-          { pt: "Estou com dificuldade em…", en: "I'm having trouble with…", icon: "😅" },
-          { pt: "Sim, Sensei!", en: "Yes, Sensei!", icon: "✅" },
-          { pt: "Obrigado, Sensei!", en: "Thank you, Sensei!", icon: "🙏" },
-          { pt: "Estou pronto!", en: "I'm ready!", icon: "💪" },
+          { pt: "Posso fazer uma pergunta?", en: "Can I ask you something?", icon: "🙋" },
+          { pt: "Não entendi bem.", en: "I didn't get that.", icon: "🤔" },
+          { pt: "Pode repetir, por favor?", en: "Can you say that again?", icon: "🔁" },
+          { pt: "Estou com dificuldade em…", en: "I'm struggling with…", icon: "😅" },
+          { pt: "Sim, Sensei!", en: "Got it, Sensei!", icon: "✅" },
+          { pt: "Obrigado, Sensei!", en: "Thanks, Sensei!", icon: "🙏" },
+          { pt: "Estou pronto!", en: "I'm ready! Let's go!", icon: "💪" },
         ],
       },
       {
@@ -635,24 +635,24 @@ const VOLUMES = [
         story: {
           title: "Campeonato Brasileiro Juvenil", titleEn: "Brazilian Youth Championship",
           lines: [
-            { speaker: "RAFAEL", pt: "E aí, Marcos! Em qual categoria você vai competir hoje?", en: "Hey Marcos! What category are you competing in today?" },
-            { speaker: "MARCOS", pt: "Estou na categoria juvenil, faixa azul, até 65kg. É meu primeiro campeonato nacional.", en: "I'm in the youth category, blue belt, up to 65kg. It's my first national championship." },
-            { speaker: "RAFAEL", pt: "Relaxa, cara. Lembra do que o professor sempre diz: 'Treine duro, compita leve.'", en: "Relax, man. Remember what the coach always says: 'Train hard, compete easy.'" },
-            { speaker: "OFICIAL", pt: "Marcos Silva Santos — suba na balança. 64,5kg. Aprovado! Boa sorte!", en: "Marcos Silva Santos — step on the scale. 64.5kg. Approved! Good luck!" },
-            { speaker: "MARCOS", pt: "Ganhei por finalização! Triângulo no segundo round!", en: "I won by submission! Triangle choke in the second round!" },
-            { speaker: "RAFAEL", pt: "Caramba, parabéns! Sabia que você ia arrasar!", en: "Wow, congratulations! I knew you'd crush it!" },
-            { speaker: "MARCOS", pt: "Valeu, amigo! Oss!", en: "Thanks, buddy! Oss!" },
+            { speaker: "RAFAEL", pt: "E aí, Marcos! Em qual categoria você vai competir hoje?", en: "Yo Marcos! What division are you fighting in today?" },
+            { speaker: "MARCOS", pt: "Estou na categoria juvenil, faixa azul, até 65kg. É meu primeiro campeonato nacional.", en: "Youth blue belt, 65kg. And bro — this is my first nationals!" },
+            { speaker: "RAFAEL", pt: "Relaxa, cara. Lembra do que o professor sempre diz: 'Treine duro, compita leve.'", en: "Dude, relax! You know what coach always says — train hard, compete easy." },
+            { speaker: "OFICIAL", pt: "Marcos Silva Santos — suba na balança. 64,5kg. Aprovado! Boa sorte!", en: "Marcos Silva Santos — step on the scale. 64.5kg. You're in! Good luck out there!" },
+            { speaker: "MARCOS", pt: "Ganhei por finalização! Triângulo no segundo round!", en: "I got the sub! Triangle in the second round — let's go!!" },
+            { speaker: "RAFAEL", pt: "Caramba, parabéns! Sabia que você ia arrasar!", en: "Dude!! I knew you had it! That was insane!" },
+            { speaker: "MARCOS", pt: "Valeu, amigo! Oss!", en: "Thanks bro! Oss!" },
           ],
         },
         flashcards: [
-          { pt: "A categoria / divisão", en: "Category / division", icon: "📋" },
+          { pt: "A categoria / divisão", en: "Weight class / division", icon: "📋" },
           { pt: "A pesagem", en: "Weigh-in", icon: "⚖️" },
-          { pt: "O round / a luta", en: "The round / the match", icon: "⏱️" },
-          { pt: "Aprovado(a)!", en: "Approved / passed!", icon: "✅" },
+          { pt: "O round / a luta", en: "The match / the round", icon: "⏱️" },
+          { pt: "Aprovado(a)!", en: "You made weight! You're in!", icon: "✅" },
           { pt: "Treine duro, compita leve.", en: "Train hard, compete easy.", icon: "💡" },
-          { pt: "Você vai arrasar!", en: "You're going to crush it!", icon: "🔥" },
-          { pt: "Parabéns!", en: "Congratulations!", icon: "🎉" },
-          { pt: "Valeu! / Obrigado!", en: "Thanks!", icon: "🙌" },
+          { pt: "Você vai arrasar!", en: "You're gonna crush it!", icon: "🔥" },
+          { pt: "Parabéns!", en: "Congrats! That was awesome!", icon: "🎉" },
+          { pt: "Valeu! / Obrigado!", en: "Thanks! / Much appreciated!", icon: "🙌" },
         ],
       },
       {
@@ -688,11 +688,11 @@ const VOLUMES = [
         story: {
           title: "A Filosofia do Jiu-Jitsu Brasileiro", titleEn: "The Philosophy of Brazilian Jiu-Jitsu",
           lines: [
-            { speaker: "TEXTO", pt: "O Jiu-Jitsu Brasileiro não é apenas um esporte — é uma filosofia de vida.", en: "Brazilian Jiu-Jitsu is not just a sport — it's a philosophy of life." },
-            { speaker: "TEXTO", pt: "'Mínimo esforço, máximo resultado' — a técnica supera a força bruta.", en: "'Minimum effort, maximum result' — technique overcomes brute strength." },
-            { speaker: "TEXTO", pt: "No tatame, não importa sua origem ou status. Todos merecem respeito.", en: "On the mat, your origin or status doesn't matter. Everyone deserves respect." },
-            { speaker: "TEXTO", pt: "Como dizem os mestres: 'Você não perde; ou você ganha, ou você aprende.'", en: "As the masters say: 'You don't lose; you either win or you learn.'" },
-            { speaker: "TEXTO", pt: "O Jiu-Jitsu é um presente do Brasil para o mundo. Oss!", en: "Jiu-Jitsu is Brazil's gift to the world. Oss!" },
+            { speaker: "TEXTO", pt: "O Jiu-Jitsu Brasileiro não é apenas um esporte — é uma filosofia de vida.", en: "BJJ isn't just a sport — it's a whole way of life." },
+            { speaker: "TEXTO", pt: "'Mínimo esforço, máximo resultado' — a técnica supera a força bruta.", en: "'Less strength, more technique' — that's the Brazilian way. Smart beats strong every time." },
+            { speaker: "TEXTO", pt: "No tatame, não importa sua origem ou status. Todos merecem respeito.", en: "On the mat, it doesn't matter where you're from or how big you are. Everyone gets respect." },
+            { speaker: "TEXTO", pt: "Como dizem os mestres: 'Você não perde; ou você ganha, ou você aprende.'", en: "The masters have a saying: 'You never lose in BJJ. You either win — or you learn.'" },
+            { speaker: "TEXTO", pt: "O Jiu-Jitsu é um presente do Brasil para o mundo. Oss!", en: "BJJ is Brazil's gift to the whole world. Oss!" },
           ],
         },
         flashcards: [
@@ -709,18 +709,18 @@ const VOLUMES = [
         id: "v4l5", icon: "🎤", title: "Apresentação Formal e Informal", titleEn: "Formal and Informal Introduction", story: null,
         flashcards: [
           { pt: "Formal: Bom dia, meu nome é [nome completo].", en: "Formal: Good morning, my name is [full name].", icon: "👔" },
-          { pt: "Informal: Oi, eu sou o/a [primeiro nome]!", en: "Informal: Hey, I'm [first name]!", icon: "😄" },
-          { pt: "É um prazer conhecê-lo(a).", en: "It's a pleasure to meet you.", icon: "🤝" },
-          { pt: "Beleza? Tudo bem?", en: "All good? How's it going?", icon: "😎" },
+          { pt: "Informal: Oi, eu sou o/a [primeiro nome]!", en: "Casual: Hey, I'm [first name]! What's up?", icon: "😄" },
+          { pt: "É um prazer conhecê-lo(a).", en: "Great to meet you!", icon: "🤝" },
+          { pt: "Beleza? Tudo bem?", en: "What's up? You good?", icon: "😎" },
           { pt: "Sou praticante há [tempo].", en: "I've been training for [time].", icon: "📅" },
-          { pt: "Gostaria de expressar minha admiração.", en: "I'd like to express my admiration.", icon: "🌟" },
-          { pt: "O senhor / A senhora", en: "Sir / Ma'am (formal address)", icon: "🎩" },
+          { pt: "Gostaria de expressar minha admiração.", en: "I really look up to you.", icon: "🌟" },
+          { pt: "O senhor / A senhora", en: "Sir / Ma'am (respectful)", icon: "🎩" },
         ],
       },
     ],
   },
 ];
- 
+
 const QUIZ_QUESTIONS = [
   { pt: "Bom dia!", en: "Good morning!", options: ["Good morning!", "Good night!", "Good afternoon!", "Hello!"], answer: 0 },
   { pt: "Tatame", en: "Mat", options: ["Belt", "Mat", "Kimono", "Teacher"], answer: 1 },
@@ -731,7 +731,7 @@ const QUIZ_QUESTIONS = [
   { pt: "A Montada", en: "The Mount", options: ["The Guard", "The Mount", "Side Control", "Back Control"], answer: 1 },
   { pt: "Faixa Preta", en: "Black Belt", options: ["White Belt", "Blue Belt", "Brown Belt", "Black Belt"], answer: 3 },
 ];
- 
+
 function FlashCard({ card, lang }) {
   const [flipped, setFlipped] = useState(false);
   const front = lang === "pt" ? card.pt : card.en;
@@ -750,7 +750,7 @@ function FlashCard({ card, lang }) {
     </div>
   );
 }
- 
+
 function StoryView({ story, lang, onClose }) {
   const [line, setLine] = useState(0);
   const lines = story.lines;
@@ -785,14 +785,14 @@ function StoryView({ story, lang, onClose }) {
     </div>
   );
 }
- 
+
 function QuizView({ lang, onClose }) {
   const [q, setQ] = useState(0);
   const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
   const current = QUIZ_QUESTIONS[q];
- 
+
   const handleAnswer = (idx) => {
     if (selected !== null) return;
     setSelected(idx);
@@ -802,7 +802,7 @@ function QuizView({ lang, onClose }) {
       else setFinished(true);
     }, 900);
   };
- 
+
   if (finished) return (
     <div style={{ minHeight: "100vh", background: "#0a1628", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 32, fontFamily: "'Nunito',sans-serif" }}>
       <div style={{ fontSize: 72, marginBottom: 16 }}>{score >= 6 ? "🏆" : score >= 4 ? "🥈" : "🥋"}</div>
@@ -813,7 +813,7 @@ function QuizView({ lang, onClose }) {
       </button>
     </div>
   );
- 
+
   return (
     <div style={{ minHeight: "100vh", background: "#0a1628", fontFamily: "'Nunito',sans-serif" }}>
       <div style={{ background: `linear-gradient(135deg, ${C.navyMid}, #0d1f3c)`, padding: "20px 20px 24px", borderBottom: `2px solid rgba(255,140,0,0.3)` }}>
@@ -851,18 +851,18 @@ function QuizView({ lang, onClose }) {
     </div>
   );
 }
- 
+
 function LessonView({ lesson, lang, onBack, onComplete }) {
   const [tab, setTab] = useState(lesson.story ? "story" : "flashcards");
   const [cardIdx, setCardIdx] = useState(0);
- 
+
   if (tab === "story" && lesson.story) {
     return <StoryView story={lesson.story} lang={lang} onClose={() => setTab("flashcards")} />;
   }
- 
+
   const cards = lesson.flashcards;
   const isLast = cardIdx === cards.length - 1;
- 
+
   return (
     <div style={{ minHeight: "100vh", background: "#0a1628", fontFamily: "'Nunito',sans-serif" }}>
       <div style={{ background: `linear-gradient(135deg, ${C.navyMid}, #0d1f3c)`, padding: "20px 20px 0", borderBottom: `2px solid rgba(255,140,0,0.3)` }}>
@@ -911,7 +911,7 @@ function LessonView({ lesson, lang, onBack, onComplete }) {
     </div>
   );
 }
- 
+
 function VolumeView({ volume, lang, completed, onComplete, onBack, onQuiz }) {
   const [activeLesson, setActiveLesson] = useState(null);
   if (activeLesson !== null) {
@@ -962,32 +962,32 @@ function VolumeView({ volume, lang, completed, onComplete, onBack, onQuiz }) {
     </div>
   );
 }
- 
+
 export default function JiuTalkApp() {
   const [lang, setLang] = useState("pt");
   const [screen, setScreen] = useState("home");
   const [activeVolumeIdx, setActiveVolumeIdx] = useState(null);
   const [completed, setCompleted] = useState(new Set());
   const [showPaywall, setShowPaywall] = useState(false);
- 
+
   const handleVolumeSelect = (idx) => {
     if (!VOLUMES[idx].freeAccess) { setShowPaywall(true); return; }
     setActiveVolumeIdx(idx);
     setScreen("volume");
   };
- 
+
   const handleComplete = (volId, lessonIdx) => {
     setCompleted(prev => new Set([...prev, `${volId}-${lessonIdx}`]));
   };
- 
+
   const totalLessons = VOLUMES.reduce((s, v) => s + v.lessons.length, 0);
   const totalDone = completed.size;
- 
+
   if (screen === "quiz") return <QuizView lang={lang} onClose={() => setScreen("home")} />;
   if (screen === "volume" && activeVolumeIdx !== null) {
     return <VolumeView volume={VOLUMES[activeVolumeIdx]} lang={lang} completed={completed} onComplete={handleComplete} onBack={() => setScreen("home")} onQuiz={() => setScreen("quiz")} />;
   }
- 
+
   return (
     <div style={{ minHeight: "100vh", background: "#0a1628", fontFamily: "'Nunito',sans-serif" }}>
       {showPaywall && (
@@ -1019,7 +1019,7 @@ export default function JiuTalkApp() {
           </div>
         </div>
       )}
- 
+
       <div style={{ background: `linear-gradient(160deg, #0d1f3c 0%, ${C.navyMid} 60%, #0d1f3c 100%)`, padding: "32px 20px 28px", borderBottom: `2px solid rgba(255,140,0,0.35)`, position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: -50, right: -50, width: 160, height: 160, borderRadius: "50%", background: "rgba(255,140,0,0.06)" }} />
         <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 24 }}>
@@ -1053,7 +1053,7 @@ export default function JiuTalkApp() {
           </div>
         )}
       </div>
- 
+
       <div style={{ padding: 20 }}>
         <h3 style={{ color: C.orange, fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: 1.5, margin: "0 0 16px" }}>
           {lang === "pt" ? "Escolha seu nível" : "Choose your level"}
@@ -1093,4 +1093,3 @@ export default function JiuTalkApp() {
     </div>
   );
 }
- 

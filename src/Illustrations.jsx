@@ -1,6 +1,3 @@
-// JiuTalk Illustrations — one SVG per lesson
-// Each returns an inline SVG, no external files needed
- 
 export function IllustrationSaudacoes() {
   return (
     <svg width="100%" viewBox="0 0 360 220" role="img" style={{borderRadius:16,display:"block"}}>

@@ -1,5 +1,343 @@
 import { useState } from "react";
-import { LESSON_ILLUSTRATIONS } from "./Illustrations.jsx";
+ 
+// ─── ILUSTRAÇÕES INLINE ───────────────────────────────────────────────────────
+const IllustrationSaudacoes = () => (
+  <svg width="100%" viewBox="0 0 360 180" role="img" style={{borderRadius:14,display:"block"}}>
+    <rect width="360" height="180" fill="#f8f9ff"/>
+    <rect width="360" height="108" fill="#fff"/>
+    <rect y="100" width="360" height="80" fill="#1a6fc4"/>
+    <line x1="0" y1="100" x2="360" y2="100" stroke="#1558a0" strokeWidth="3"/>
+    <line x1="0" y1="130" x2="360" y2="130" stroke="#1558a0" strokeWidth="1" strokeDasharray="14,7" opacity="0.4"/>
+    <line x1="0" y1="158" x2="360" y2="158" stroke="#1558a0" strokeWidth="1" strokeDasharray="14,7" opacity="0.4"/>
+    <line x1="72" y1="100" x2="72" y2="180" stroke="#1558a0" strokeWidth="1" strokeDasharray="14,7" opacity="0.4"/>
+    <line x1="180" y1="100" x2="180" y2="180" stroke="#1558a0" strokeWidth="1" strokeDasharray="14,7" opacity="0.4"/>
+    <line x1="288" y1="100" x2="288" y2="180" stroke="#1558a0" strokeWidth="1" strokeDasharray="14,7" opacity="0.4"/>
+    <ellipse cx="180" cy="106" rx="30" ry="6" fill="#1558a0" opacity="0.3"/>
+    <rect x="166" y="70" width="12" height="38" rx="6" fill="#f5f5f5" stroke="#e0e0e0" strokeWidth="1.5"/>
+    <rect x="182" y="70" width="12" height="38" rx="6" fill="#f5f5f5" stroke="#e0e0e0" strokeWidth="1.5"/>
+    <ellipse cx="172" cy="106" rx="10" ry="6" fill="#222"/>
+    <ellipse cx="188" cy="106" rx="10" ry="6" fill="#222"/>
+    <rect x="154" y="36" width="52" height="42" rx="13" fill="#fff" stroke="#e8e8e8" strokeWidth="2"/>
+    <path d="M180 40 L167 58 L180 63 L193 58 Z" fill="#f0f0f0" stroke="#d0d0d0" strokeWidth="1"/>
+    <rect x="152" y="66" width="56" height="7" rx="3" fill="#f0f0f0" stroke="#ccc" strokeWidth="1.5"/>
+    <path d="M154 46 Q132 34 124 18" stroke="#fff" strokeWidth="13" strokeLinecap="round" fill="none"/>
+    <ellipse cx="121" cy="14" rx="11" ry="10" fill="#FFCBA4"/>
+    <line x1="114" y1="6" x2="111" y2="0" stroke="#FFCBA4" strokeWidth="5" strokeLinecap="round"/>
+    <line x1="121" y1="4" x2="120" y2="0" stroke="#FFCBA4" strokeWidth="5" strokeLinecap="round"/>
+    <line x1="128" y1="6" x2="129" y2="0" stroke="#FFCBA4" strokeWidth="5" strokeLinecap="round"/>
+    <path d="M206 44 Q220 58 218 72" stroke="#fff" strokeWidth="13" strokeLinecap="round" fill="none"/>
+    <rect x="171" y="20" width="18" height="18" rx="8" fill="#FFCBA4"/>
+    <ellipse cx="180" cy="14" rx="26" ry="28" fill="#FFCBA4"/>
+    <path d="M156 7 Q158 0" stroke="none"/>
+    <path d="M155 8 Q157 -2 180 -4 Q203 -2 205 8 Q196 0 180 0 Q164 0 155 8Z" fill="#2c1810"/>
+    <ellipse cx="157" cy="11" rx="7" ry="11" fill="#2c1810"/>
+    <ellipse cx="203" cy="11" rx="7" ry="11" fill="#2c1810"/>
+    <ellipse cx="171" cy="12" rx="6" ry="7" fill="white"/>
+    <ellipse cx="189" cy="12" rx="6" ry="7" fill="white"/>
+    <ellipse cx="173" cy="14" rx="3.5" ry="4" fill="#2c1810"/>
+    <ellipse cx="191" cy="14" rx="3.5" ry="4" fill="#2c1810"/>
+    <ellipse cx="175" cy="12" rx="1.5" ry="1.5" fill="white"/>
+    <ellipse cx="193" cy="12" rx="1.5" ry="1.5" fill="white"/>
+    <path d="M169 24 Q180 32 191 24" stroke="#2c1810" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+    <path d="M171 26 Q180 31 189 26 Q180 30 171 26Z" fill="white"/>
+    <ellipse cx="161" cy="20" rx="7" ry="5" fill="#ff9999" opacity="0.4"/>
+    <ellipse cx="199" cy="20" rx="7" ry="5" fill="#ff9999" opacity="0.4"/>
+    <rect x="210" y="4" width="86" height="40" rx="11" fill="#ff8c00"/>
+    <path d="M218 42 L207 54 L228 42Z" fill="#ff8c00"/>
+    <text x="253" y="20" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="15" fontWeight="900" fill="white">OSS!</text>
+    <text x="253" y="36" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="11" fill="white" opacity="0.9">Hello! / Olá!</text>
+  </svg>
+);
+ 
+const IllustrationAnimais = () => (
+  <svg width="100%" viewBox="0 0 360 160" role="img" style={{borderRadius:14,display:"block"}}>
+    <rect width="360" height="160" fill="#e8f5e9"/>
+    <rect width="360" height="26" fill="#0a1628"/>
+    <text x="180" y="18" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="12" fontWeight="900" fill="#ff8c00">Mat Animals / Animais do Tatame</text>
+    <line x1="120" y1="26" x2="120" y2="160" stroke="#a5d6a7" strokeWidth="1" strokeDasharray="10,6"/>
+    <line x1="240" y1="26" x2="240" y2="160" stroke="#a5d6a7" strokeWidth="1" strokeDasharray="10,6"/>
+    <line x1="0" y1="96" x2="360" y2="96" stroke="#a5d6a7" strokeWidth="1" strokeDasharray="10,6"/>
+    <text x="60" y="82" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="38">🐸</text>
+    <rect x="18" y="88" width="84" height="24" rx="8" fill="#22c55e"/>
+    <text x="60" y="100" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="9" fontWeight="900" fill="white">Frog / Sapo — Jump!</text>
+    <text x="180" y="82" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="38">🐻</text>
+    <rect x="138" y="88" width="84" height="24" rx="8" fill="#92400e"/>
+    <text x="180" y="100" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="9" fontWeight="900" fill="white">Bear / Urso — All fours!</text>
+    <text x="300" y="82" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="38">🦐</text>
+    <rect x="258" y="88" width="84" height="24" rx="8" fill="#f97316"/>
+    <text x="300" y="100" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="9" fontWeight="900" fill="white">Shrimp / Camarão</text>
+    <text x="60" y="140" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="38">🐊</text>
+    <rect x="18" y="148" width="84" height="12" rx="5" fill="#16a34a"/>
+    <text x="60" y="158" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="8" fontWeight="900" fill="white">Alligator / Jacaré</text>
+    <text x="180" y="140" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="38">🦀</text>
+    <rect x="138" y="148" width="84" height="12" rx="5" fill="#dc2626"/>
+    <text x="180" y="158" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="8" fontWeight="900" fill="white">Crab / Caranguejo</text>
+    <text x="300" y="140" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="38">🐒</text>
+    <rect x="258" y="148" width="84" height="12" rx="5" fill="#7c3aed"/>
+    <text x="300" y="158" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="8" fontWeight="900" fill="white">Monkey / Macaco</text>
+  </svg>
+);
+ 
+const IllustrationCorpo = () => (
+  <svg width="100%" viewBox="0 0 360 200" role="img" style={{borderRadius:14,display:"block"}}>
+    <rect width="360" height="200" fill="#f0f7ff"/>
+    <rect width="360" height="26" fill="#0a1628"/>
+    <text x="180" y="18" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="12" fontWeight="900" fill="#ff8c00">Body Parts / Partes do Corpo</text>
+    <ellipse cx="180" cy="194" rx="28" ry="6" fill="#c0d8f0" opacity="0.5"/>
+    <rect x="165" y="154" width="11" height="42" rx="5" fill="#f5f5f5" stroke="#e0e0e0" strokeWidth="1.5"/>
+    <rect x="184" y="154" width="11" height="42" rx="5" fill="#f5f5f5" stroke="#e0e0e0" strokeWidth="1.5"/>
+    <ellipse cx="170" cy="194" rx="10" ry="6" fill="#222"/>
+    <ellipse cx="189" cy="194" rx="10" ry="6" fill="#222"/>
+    <rect x="154" y="80" width="52" height="82" rx="14" fill="#fff" stroke="#e0e0e0" strokeWidth="2"/>
+    <path d="M180 84 L166 106 L180 111 L194 106 Z" fill="#f0f0f0" stroke="#d0d0d0" strokeWidth="1"/>
+    <rect x="152" y="138" width="56" height="8" rx="4" fill="#eee" stroke="#ccc" strokeWidth="1.5"/>
+    <path d="M154 90 Q132 100 126 120" stroke="#fff" strokeWidth="13" strokeLinecap="round" fill="none"/>
+    <ellipse cx="123" cy="123" rx="10" ry="9" fill="#FFCBA4"/>
+    <path d="M206 90 Q228 100 234 120" stroke="#fff" strokeWidth="13" strokeLinecap="round" fill="none"/>
+    <ellipse cx="237" cy="123" rx="10" ry="9" fill="#FFCBA4"/>
+    <rect x="172" y="60" width="16" height="22" rx="8" fill="#FFCBA4"/>
+    <ellipse cx="180" cy="48" rx="28" ry="30" fill="#FFCBA4"/>
+    <path d="M154 40 Q156 20 180 18 Q204 20 206 40 Q198 28 180 26 Q162 28 154 40Z" fill="#2c1810"/>
+    <ellipse cx="156" cy="44" rx="6" ry="11" fill="#2c1810"/>
+    <ellipse cx="204" cy="44" rx="6" ry="11" fill="#2c1810"/>
+    <ellipse cx="171" cy="46" rx="6" ry="7" fill="white"/>
+    <ellipse cx="189" cy="46" rx="6" ry="7" fill="white"/>
+    <ellipse cx="173" cy="48" rx="3.5" ry="4" fill="#2c1810"/>
+    <ellipse cx="191" cy="48" rx="3.5" ry="4" fill="#2c1810"/>
+    <path d="M170 59 Q180 67 190 59" stroke="#2c1810" strokeWidth="2" fill="none" strokeLinecap="round"/>
+    <path d="M172 61 Q180 66 188 61 Q180 65 172 61Z" fill="white"/>
+    <ellipse cx="163" cy="55" rx="6" ry="4" fill="#ff9999" opacity="0.4"/>
+    <ellipse cx="197" cy="55" rx="6" ry="4" fill="#ff9999" opacity="0.4"/>
+    {[
+      ["Head/Cabeça","#ff8c00",214,36,322,32],
+      ["Neck/Pescoço","#22c55e",214,68,322,64],
+      ["Shoulder/Ombro","#3b82f6",214,90,322,86],
+      ["Hand/Mão","#9333ea",248,124,322,120],
+      ["Belly/Barriga","#f97316",214,110,322,106],
+      ["Knee/Joelho","#ec4899",214,160,322,156],
+      ["Foot/Pé","#0891b2",214,190,322,186],
+    ].map(([label,color,lx,ly,tx,ty],i)=>(
+      <g key={i}>
+        <line x1={lx} y1={ly} x2={tx} y2={ty} stroke={color} strokeWidth="1.5" strokeLinecap="round"/>
+        <circle cx={lx} cy={ly} r="3" fill={color}/>
+        <rect x={tx+2} y={ty-9} width={label.length*5.2} height="18" rx="5" fill={color}/>
+        <text x={tx+4+label.length*2.6} y={ty+4} textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="8.5" fontWeight="900" fill="white">{label}</text>
+      </g>
+    ))}
+    <line x1="146" y1="100" x2="72" y2="98" stroke="#ff8c00" strokeWidth="1.5"/>
+    <circle cx="146" cy="100" r="3" fill="#ff8c00"/>
+    <rect x="8" y="90" width="62" height="18" rx="5" fill="#ff8c00"/>
+    <text x="39" y="103" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="8.5" fontWeight="900" fill="white">Arm/Braço</text>
+    <line x1="146" y1="166" x2="72" y2="168" stroke="#f97316" strokeWidth="1.5"/>
+    <circle cx="146" cy="166" r="3" fill="#f97316"/>
+    <rect x="6" y="158" width="64" height="18" rx="5" fill="#f97316"/>
+    <text x="38" y="171" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="8.5" fontWeight="900" fill="white">Leg/Perna</text>
+  </svg>
+);
+ 
+const IllustrationCoresKimono = () => (
+  <svg width="100%" viewBox="0 0 360 160" role="img" style={{borderRadius:14,display:"block"}}>
+    <rect width="360" height="160" fill="#f8f9ff"/>
+    <rect width="360" height="110" fill="#fff"/>
+    <rect y="108" width="360" height="52" fill="#1a6fc4"/>
+    <line x1="0" y1="108" x2="360" y2="108" stroke="#1558a0" strokeWidth="3"/>
+    <rect x="16" y="18" width="328" height="6" rx="3" fill="#8B6914"/>
+    {[
+      [80,"#f5f5f5","#ddd","WHITE","Branco","#555"],
+      [180,"#2563eb","#1d4ed8","BLUE","Azul","white"],
+      [280,"#1a1a1a","#000","BLACK","Preto","white"],
+    ].map(([cx,fill,stroke,label,sub,tc],i)=>(
+      <g key={i}>
+        <line x1={cx} y1={24} x2={cx} y2={36} stroke="#888" strokeWidth="2"/>
+        <path d={`M${cx-46} 36 L${cx+46} 36 L${cx+46} 100 Q${cx} 110 ${cx-46} 100 Z`} fill={fill} stroke={stroke} strokeWidth="2"/>
+        <path d={`M${cx} 40 L${cx-18} 62 L${cx} 68 L${cx+18} 62 Z`} fill={i===0?"#e8e8e8":i===1?"#1d4ed8":"#111"} stroke={i===0?"#ccc":i===1?"#1e40af":"#000"} strokeWidth="1"/>
+        <path d={`M${cx-46} 36 Q${cx-70} 48 ${cx-76} 72`} stroke={fill} strokeWidth="18" strokeLinecap="round" fill="none"/>
+        <path d={`M${cx+46} 36 Q${cx+70} 48 ${cx+76} 72`} stroke={fill} strokeWidth="18" strokeLinecap="round" fill="none"/>
+        <rect x={cx-44} y={80} width={88} height="8" rx="4" fill={i===2?"#cc0000":fill} stroke={stroke} strokeWidth="1.5"/>
+        {i===2 && <rect x={cx-44} y={80} width={20} height="8" rx="2" fill="#cc0000"/>}
+        <text x={cx} y={124} textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="11" fontWeight="900" fill="white">{label}</text>
+        <text x={cx} y={138} textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="10" fill="white" opacity="0.85">{sub}</text>
+      </g>
+    ))}
+    {[["#f5f5f5","#ccc",20],["#9ca3af","#888",56],["#fbbf24","#f59e0b",92],["#f97316","#ea580c",128],["#22c55e","#16a34a",164],["#2563eb","#1d4ed8",200],["#7c3aed","#6d28d9",236],["#78350f","#92400e",272],["#111","#000",308]].map(([f,s,cx],i)=>(
+      <circle key={i} cx={cx} cy={150} r="10" fill={f} stroke={s} strokeWidth="1.5"/>
+    ))}
+  </svg>
+);
+ 
+const IllustrationFaixas = () => {
+  const belts = [
+    {color:"#f5f5f5",stroke:"#ddd",label:"White",sub:"Branca",tc:"#555"},
+    {color:"#9ca3af",stroke:"#888",label:"Grey",sub:"Cinza",tc:"white"},
+    {color:"#fbbf24",stroke:"#f59e0b",label:"Yellow",sub:"Amarela",tc:"#78350f"},
+    {color:"#f97316",stroke:"#ea580c",label:"Orange",sub:"Laranja",tc:"white"},
+    {color:"#22c55e",stroke:"#16a34a",label:"Green",sub:"Verde",tc:"white"},
+    {color:"#2563eb",stroke:"#1d4ed8",label:"Blue",sub:"Azul",tc:"white"},
+    {color:"#7c3aed",stroke:"#6d28d9",label:"Purple",sub:"Roxa",tc:"white"},
+    {color:"#78350f",stroke:"#92400e",label:"Brown",sub:"Marrom",tc:"white"},
+    {color:"#111",stroke:"#000",label:"Black",sub:"Preta",tc:"#fbbf24"},
+  ];
+  return (
+    <svg width="100%" viewBox="0 0 360 180" role="img" style={{borderRadius:14,display:"block"}}>
+      <rect width="360" height="180" fill="#0a1628"/>
+      <rect x="90" y="6" width="180" height="30" rx="10" fill="#ff8c00"/>
+      <text x="180" y="18" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="11" fontWeight="900" fill="white">The Belts / As Faixas</text>
+      <text x="180" y="30" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="9" fill="white" opacity="0.9">Brazilian Jiu-Jitsu — 9 belts!</text>
+      <rect x="6" y="42" width="348" height="5" rx="2.5" fill="#8B6914"/>
+      {belts.map((b,i)=>{
+        const bw=34, gap=4, cx=6+i*(bw+gap)+bw/2;
+        return (
+          <g key={i}>
+            <line x1={cx} y1={47} x2={cx} y2={58} stroke="#888" strokeWidth="2"/>
+            <rect x={cx-bw/2} y={58} width={bw} height={10} rx="4" fill={b.color} stroke={b.stroke} strokeWidth="1.5"/>
+            {b.label==="Black" && <rect x={cx-bw/2} y={58} width={9} height={10} rx="3" fill="#cc0000"/>}
+            <rect x={cx-6} y={68} width={12} height={50} rx="3" fill={b.color} stroke={b.stroke} strokeWidth="1.5"/>
+            <rect x={cx+3} y={68} width={12} height={50} rx="3" fill={b.color} stroke={b.stroke} strokeWidth="1.5"/>
+            <rect x={cx-bw/2} y={128} width={bw} height={36} rx="7" fill={b.label==="Black"?"#111":b.color} stroke={b.label==="Black"?"#fbbf24":b.stroke} strokeWidth={b.label==="Black"?2:1}/>
+            <text x={cx} y={141} textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="7" fontWeight="900" fill={b.tc}>{b.label}</text>
+            <text x={cx} y={152} textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="6.5" fill={b.tc} opacity="0.9">{b.sub}</text>
+            <text x={cx} y={161} textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="6" fill={b.tc} opacity="0.7">{i<5?"Kids":i===8?"Master!":"Adult"}</text>
+          </g>
+        );
+      })}
+      <path d="M8 172 L352 172" stroke="#ff8c00" strokeWidth="1.5" strokeDasharray="6,3" fill="none"/>
+      <polygon points="352,172 344,168 344,176" fill="#ff8c00"/>
+      <text x="180" y="177" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="9" fill="#ff8c00" fontWeight="700">Your journey / Sua jornada →</text>
+    </svg>
+  );
+};
+ 
+const IllustrationDojo = () => (
+  <svg width="100%" viewBox="0 0 360 180" role="img" style={{borderRadius:14,display:"block"}}>
+    <rect width="360" height="180" fill="#f5f0e8" stroke="#8B6914" strokeWidth="3"/>
+    <rect width="360" height="24" fill="#0a1628"/>
+    <text x="180" y="16" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="11" fontWeight="900" fill="#ff8c00">Parts of the Dojo / Partes da Academia</text>
+    <rect x="82" y="30" width="196" height="90" rx="5" fill="#1a6fc4" stroke="#1558a0" strokeWidth="2"/>
+    <line x1="82" y1="58" x2="278" y2="58" stroke="#1558a0" strokeWidth="1" strokeDasharray="8,4" opacity="0.4"/>
+    <line x1="82" y1="88" x2="278" y2="88" stroke="#1558a0" strokeWidth="1" strokeDasharray="8,4" opacity="0.4"/>
+    <line x1="140" y1="30" x2="140" y2="120" stroke="#1558a0" strokeWidth="1" strokeDasharray="8,4" opacity="0.4"/>
+    <line x1="180" y1="30" x2="180" y2="120" stroke="#1558a0" strokeWidth="1" strokeDasharray="8,4" opacity="0.4"/>
+    <line x1="220" y1="30" x2="220" y2="120" stroke="#1558a0" strokeWidth="1" strokeDasharray="8,4" opacity="0.4"/>
+    <text x="180" y="72" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="12" fontWeight="900" fill="white" opacity="0.5">TATAME</text>
+    <text x="180" y="86" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="9" fill="white" opacity="0.4">The Mat</text>
+    <rect x="4" y="30" width="74" height="90" rx="5" fill="#e8d5c4" stroke="#8B6914" strokeWidth="1.5"/>
+    <text x="41" y="70" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="8" fill="#78350f" fontWeight="700">Changing</text>
+    <text x="41" y="82" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="8" fill="#78350f" fontWeight="700">Room</text>
+    <text x="41" y="94" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="7.5" fill="#92400e">Vestiário</text>
+    <rect x="282" y="30" width="74" height="90" rx="5" fill="#d1fae5" stroke="#16a34a" strokeWidth="1.5"/>
+    <text x="319" y="70" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="8" fill="#065f46" fontWeight="700">Reception</text>
+    <text x="319" y="82" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="7.5" fill="#065f46">Recepção</text>
+    <rect x="4" y="126" width="74" height="50" rx="5" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1.5"/>
+    <text x="41" y="147" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="16">💧</text>
+    <text x="41" y="164" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="7" fill="#1e40af" fontWeight="700">Water/Bebedouro</text>
+    <rect x="82" y="126" width="196" height="50" rx="5" fill="#fef3c7" stroke="#f59e0b" strokeWidth="1.5"/>
+    <text x="180" y="142" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="8" fill="#78350f" fontWeight="700">Warm-up Area / Aquecimento</text>
+    <text x="140" y="163" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="18">🏃</text>
+    <text x="180" y="163" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="18">🤸</text>
+    <text x="220" y="163" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="18">⚡</text>
+    <rect x="282" y="126" width="74" height="50" rx="5" fill="#fce7f3" stroke="#ec4899" strokeWidth="1.5"/>
+    <text x="319" y="147" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="8" fill="#9d174d" fontWeight="700">Photo Wall</text>
+    <text x="319" y="159" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="7.5" fill="#9d174d">Parede Fotos</text>
+    <text x="319" y="170" textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="13">🖼️</text>
+  </svg>
+);
+ 
+const IllustrationComidas = () => (
+  <svg width="100%" viewBox="0 0 360 140" role="img" style={{borderRadius:14,display:"block"}}>
+    <rect width="360" height="140" fill="#fff8f0"/>
+    <rect width="360" height="24" fill="#0a1628"/>
+    <text x="180" y="16" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="11" fontWeight="900" fill="#ff8c00">Brazilian Foods / Comidas Brasileiras 🇧🇷</text>
+    {[
+      {emoji:"🫐",name:"Açaí",sub:"Amazon berry",color:"#7c3aed",x:38},
+      {emoji:"🧀",name:"Pão de Queijo",sub:"Cheese bread",color:"#f59e0b",x:106},
+      {emoji:"🍫",name:"Brigadeiro",sub:"Choc. truffle",color:"#78350f",x:174},
+      {emoji:"🍗",name:"Coxinha",sub:"Chicken fritter",color:"#dc2626",x:242},
+      {emoji:"🫘",name:"Feijoada",sub:"Bean stew",color:"#1a1a2e",x:310},
+    ].map((f,i)=>(
+      <g key={i}>
+        <rect x={f.x-32} y={28} width={64} height={88} rx="10" fill="white" stroke={f.color} strokeWidth="2"/>
+        <rect x={f.x-32} y={28} width={64} height={24} rx="10" fill={f.color}/>
+        <rect x={f.x-32} y={40} width={64} height={12} fill={f.color}/>
+        <text x={f.x} y={37} textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="7.5" fontWeight="900" fill="white">{f.name}</text>
+        <text x={f.x} y={48} textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="7" fill="white" opacity="0.9">{f.sub}</text>
+        <text x={f.x} y={96} textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="34">{f.emoji}</text>
+      </g>
+    ))}
+    <rect x="4" y="122" width="352" height="16" rx="6" fill="#009c3b"/>
+    <text x="180" y="134" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="9" fontWeight="900" fill="#fedd00">🇧🇷 Eat like a Brazilian! / Coma como um brasileiro!</text>
+  </svg>
+);
+ 
+const IllustrationPosicoes = () => (
+  <svg width="100%" viewBox="0 0 360 160" role="img" style={{borderRadius:14,display:"block"}}>
+    <rect width="360" height="160" fill="#f0f4ff"/>
+    <rect width="360" height="24" fill="#0a1628"/>
+    <text x="180" y="16" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="11" fontWeight="900" fill="#ff8c00">Basic Positions / Posições Básicas</text>
+    {[
+      {label:"Closed Guard",sub:"Guarda Fechada",emoji:"🛡️",color:"#2563eb",x:46},
+      {label:"The Mount",sub:"A Montada",emoji:"🏔️",color:"#dc2626",x:136},
+      {label:"Side Control",sub:"Cem Kilos",emoji:"↔️",color:"#16a34a",x:226},
+      {label:"Back Control",sub:"As Costas",emoji:"🔙",color:"#7c3aed",x:316},
+    ].map((p,i)=>(
+      <g key={i}>
+        <rect x={p.x-40} y={28} width={80} height={124} rx="12" fill="white" stroke={p.color} strokeWidth="2.5"/>
+        <rect x={p.x-40} y={28} width={80} height={28} rx="12" fill={p.color}/>
+        <rect x={p.x-40} y={42} width={80} height={14} fill={p.color}/>
+        <text x={p.x} y={40} textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="8" fontWeight="900" fill="white">{p.label}</text>
+        <text x={p.x} y={52} textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="7.5" fill="white" opacity="0.9">{p.sub}</text>
+        <text x={p.x} y={108} textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="42">{p.emoji}</text>
+        <text x={p.x} y={142} textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="8" fill={p.color} fontWeight="700">🥋 BJJ</text>
+      </g>
+    ))}
+  </svg>
+);
+ 
+const IllustrationSentimentos = () => {
+  const feelings = [
+    {emoji:"😄",label:"Happy",sub:"Feliz",color:"#fbbf24"},
+    {emoji:"😤",label:"Proud",sub:"Orgulhoso",color:"#ff8c00"},
+    {emoji:"😎",label:"Confident",sub:"Confiante",color:"#7c3aed"},
+    {emoji:"🔥",label:"Motivated",sub:"Motivado",color:"#22c55e"},
+    {emoji:"😮‍💨",label:"Tired",sub:"Cansado",color:"#6b7280"},
+    {emoji:"😬",label:"Nervous",sub:"Nervoso",color:"#3b82f6"},
+    {emoji:"😤",label:"Frustrated",sub:"Frustrado",color:"#f97316"},
+    {emoji:"😞",label:"Disappointed",sub:"Desapontado",color:"#dc2626"},
+    {emoji:"😨",label:"Scared",sub:"Com medo",color:"#0891b2"},
+  ];
+  return (
+    <svg width="100%" viewBox="0 0 360 190" role="img" style={{borderRadius:14,display:"block"}}>
+      <rect width="360" height="190" fill="#fdf4ff"/>
+      <rect width="360" height="24" fill="#0a1628"/>
+      <text x="180" y="16" textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="12" fontWeight="900" fill="#ff8c00">Feelings / Sentimentos</text>
+      {feelings.map((f,i)=>{
+        const col=i%3, row=Math.floor(i/3);
+        const x=18+col*116+48, y=30+row*54;
+        return (
+          <g key={i}>
+            <rect x={x-48} y={y} width={96} height={50} rx="10" fill="white" stroke={f.color} strokeWidth="2"/>
+            <rect x={x-48} y={y} width={96} height={20} rx="10" fill={f.color}/>
+            <rect x={x-48} y={y+10} width={96} height={10} fill={f.color}/>
+            <text x={x} y={y+13} textAnchor="middle" fontFamily="Arial Black,sans-serif" fontSize="9" fontWeight="900" fill="white">{f.label}</text>
+            <text x={x} y={y+22} textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="8" fill="white" opacity="0.9">{f.sub}</text>
+            <text x={x} y={y+44} textAnchor="middle" fontFamily="Arial,sans-serif" fontSize="22">{f.emoji}</text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+};
+ 
+const LESSON_ILLUSTRATIONS = {
+  "v1l1": IllustrationSaudacoes,
+  "v1l2": IllustrationCoresKimono,
+  "v1l3": IllustrationCorpo,
+  "v1l4": IllustrationAnimais,
+  "v2l2": IllustrationFaixas,
+  "v2l3": IllustrationDojo,
+  "v2l4": IllustrationComidas,
+  "v3l1": IllustrationPosicoes,
+  "v3l5": IllustrationSentimentos,
+};
  
 const C = {
   navy: "#0d1f3c",
@@ -755,3 +1093,4 @@ export default function JiuTalkApp() {
     </div>
   );
 }
+ 
